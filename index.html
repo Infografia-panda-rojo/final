@@ -1,0 +1,496 @@
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <!-- Meta datos -->
+
+        <meta name="description" content="Infografía sobre el animal más bello del mundo">
+
+        <meta name="image" content="enlace de img aquí">
+
+        <!-- Schema.org for Google -->
+
+        <meta itemprop="name" content="Panda rojo">
+
+        <meta itemprop="description" content="Infografía sobre el animal más bello del mundo">
+
+        <meta itemprop="image" content="enlace de img aquí">
+
+        <!-- Twitter -->
+
+        <meta name="twitter:card" content="summary">
+
+        <meta name="twitter:title" content="Panda rojo">
+
+        <meta name="twitter:description" content="Infografía sobre el animal más bello del mundo">
+
+        <meta name="twitter:image:src" content="enlace de img aquí">
+
+        <!-- Open Graph general (Facebook, Pinterest & Google+) -->
+
+        <meta name="og:title" content="Panda rojo">
+
+        <meta name="og:description" content="Infografía sobre el animal más bello del mundo">
+
+        <meta name="og:image" content="enlace de img aquí">
+
+        <meta name="og:url" content="https://infografia-panda-rojo.github.io/final/">
+
+        <meta name="og:site_name" content="Panda rojo">
+
+        <meta name="og:type" content="website">
+
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous" />
+        <style>
+            /* AHORA VAMOS A IMPORTAR, DE UN VIAJE, DOS FUENTES Y SUS RESPECTIVOS PESOS */
+
+            @import url("https://fonts.googleapis.com/css2?family=PT+Serif:ital,wght@0,400;0,700;1,400&family=Roboto:ital,wght@0,300;0,400;0,500;1,400&display=swap");
+
+            /* vamos a contradecir a Bootstrap, partiendo por la fuente tipográfica y afectando sus variables --> https://getbootstrap.com/docs/5.1/customize/css-variables/  */
+
+            :root {
+                --bs-body-font-family: "Roboto", sans-serif;
+                --bs-primary: #f70;
+            }
+
+            a {
+                color: #222; /*colores simplificados #222222 otra forma de escribir los colores rgb(255,255,255) o rgba (255,255,255,0.5) donde a es alpha, simil a la opacidad que va desde 0 a 1*/
+                text-decoration: underline;
+                transition: color ease 0.5s;
+            }
+            a:hover {
+                color: var(--bs-primary);
+                text-decoration: none;
+                transition: color ease 0.5s;
+            }
+            /* vamos a ajustar los pesos de algunos títulos a lo que dispone la fuente  */
+
+            h1,
+            h2,
+            h3,
+            h4 {
+                font-weight: 400;
+                font-family: "PT Serif", serif;
+            }
+
+            /* vamos a ajustar los pesos de otros títulos y negrita a lo que dispone la fuente  */
+
+            h5,
+            h6 {
+                font-weight: 700;
+                font-family: "PT Serif", serif;
+            }
+
+            /* AQUÍ HAGO UN AJUSTE IDIOMÁTICO:  EL GRINGO ENFATIZA CON ITÁLICA. EN CASTELLANO NO LO HACEMOS ASÍ, ENFATIZAMOS CON PESO DE FUENTE, MANTENIENDO UN ESTILO NORMAL */
+
+            strong,
+            b,
+            em {
+                font-weight: 500;
+                font-style: normal;
+            }
+
+            /* definiré un tamaño del título de primer nivel (h1) que se ajuste según el viewport width --> https://www.yunbitsoftware.com/blog/2017/06/22/viewport-units-css-que-es/ */
+
+            h1 {
+                font-size: calc(3rem + 3vw);
+            }
+
+            /* repetiré el truco anterior con el título de segundo nivel (h2), que, a diferencia del anterior, puedo ocupar varias veces en la misma página */
+
+            h2 {
+                font-size: calc(0.75rem + 1vw);
+            }
+
+            /* usaré el ">" entre el título se segundo nive (h2) y el lapso en la misma línea (span) --> https://techbrij.com/css-selector-adjacent-child-sibling */
+
+            h2 > span {
+                background: var(--bs-primary);
+                color: #fff;
+            }
+
+            /* sigamos con el título de tercer nivel (h3) */
+
+            h3 {
+                font-size: calc(1.5rem + 1vw);
+            }
+
+            header {
+                background-image: url("portada.jpg");
+                background-size: 100% auto;
+                background-repeat: no-repeat;
+                background-position: center top;
+                padding-top: 35vw;
+            }
+
+            aside{
+                background: linear-gradient(#fff, #e7e8e9);
+            }
+
+            span[data-bs-toggle="popover"] {
+                cursor: pointer;
+            }
+        </style>
+
+        <!--ESTO SERVIRÁ PARA COMPARAR UN ANTES Y UN DESPUÉS-->
+        <link href="https://unpkg.com/image-compare-viewer/dist/image-compare-viewer.min.css" rel="stylesheet" />
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous" />
+—
+
+
+        <title>Panda Rojo | Infografía</title>
+    </head>
+    <body>
+        <header>
+            <div class="container">
+                <div class="row">
+                    <div class="col-sm-11 col-md-10 col-lg-9 col-xl-8 col-xxl-7 mx-auto">
+                        <h2 class="text-center mt-5 fst-italic"><span class="px-2 py-1">Ailurus fulgens</span></h2>
+                        <h1 class="text-center py-3">Panda Rojo</h1>
+                        <!--desde acá la edición de nombres-->
+                        <h6 class="text-center mb-5 text-muted">
+                            Por
+                            <span
+                                data-bs-container="body"
+                                data-bs-toggle="popover"
+                                data-bs-trigger="hover focus"
+                                data-bs-placement="top"
+                                data-bs-content="<div class='text-center'><img src='IMG/Andrea.jpg' class='w-50 mb-2 rounded-circle'><br>Andrea B<br><span class='small text-muted'>Diseñadora de Ambientes</span></div>"
+                            >
+                                Andrea Bravo
+                            </span>
+                            e
+                            <span
+                                data-bs-container="body"
+                                data-bs-toggle="popover"
+                                data-bs-trigger="hover focus"
+                                data-bs-placement="top"
+                                data-bs-content="<div class='text-center'><img src='IMG/Isabel.jpg' class='w-50 mb-2 rounded-circle'><br>Isabel Méndez<br><span class='small text-muted'>Diseñadora Gráfica</span></div>"
+                            >
+                                Isabel Méndez
+                            </span>
+                        </h6>
+                        <!--hasta aquí la edición de nombres-->
+                        <p class="lead">
+                            Tímido y solitario animal renombrado como ˈel perezoso asiáticoˈ, pues destina gran parte de su día a descansar sobre los árboles. Descubierto en 1825 por Frederic Cuvier, zoólogo, quien los describió como "el
+                            animal más bonito del mundo".
+                        </p>
+                        <p>
+                            También conocido como: <em>panda chico</em>, <em>petit panda (panda pequeño)</em>, <em>red panda (panda rojizo)</em>, <em>fire fox (zorro de fuego)</em>, <em>fox bear (zorro-oso)</em>,
+                            <em>Himalayan racoon (mapache del Himalaya)</em>, <em>katzenbär (gato-oso)</em>.
+                        </p>
+                        <p>
+                            En el año 2015, fue declarado como una <em>Especie en Riesgo</em> en la lista roja de la
+                            <a href="https://www.iucnredlist.org/species/714/110023718" target="_blank" title="The Biggest Mistake in Writing for the Web">UICN</a>
+                        </p>
+                        <div class="row">
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 300" class="col-11 col-sm-10 col-md-9 col-lg-8 col-xl-7 col-xxl-6 my-3 mx-auto">
+                                <style type="text/css">
+                                    line,
+                                    path {
+                                        fill: none;
+                                        stroke: #777777;
+                                        stroke-linecap: round;
+                                    }
+                                    .blanco {
+                                        fill: #ffffff;
+                                        font-size: 45px;
+                                    }
+                                    .gris {
+                                        fill: #777777;
+                                        font-size: 35px;
+                                    }
+                                    .no {
+                                        fill: #999999;
+                                    }
+                                    .si {
+                                        fill: var(--bs-primary);
+                                    }
+                                </style>
+                                <g id="ex">
+                                    <circle class="no" cx="82.1" cy="228.7" r="46.4" />
+                                    <text transform="matrix(1 0 0 1 54 245)" class="blanco">EX</text>
+                                </g>
+                                <g id="ew">
+                                    <circle class="no" cx="212.6" cy="228.7" r="46.4" />
+                                    <text transform="matrix(1 0 0 1 180 245)" class="blanco">EW</text>
+                                </g>
+                                <g id="cr">
+                                    <circle class="no" cx="342.9" cy="228.7" r="46.4" />
+                                    <text transform="matrix(1 0 0 1 313 245)" class="blanco">CR</text>
+                                </g>
+                                <g id="en">
+                                    <circle class="si" cx="473.6" cy="228.7" r="46.4" />
+                                    <text transform="matrix(1 0 0 1 444 245)" class="blanco">EN</text>
+                                </g>
+                                <g id="vu">
+                                    <circle class="no" cx="603.8" cy="228.7" r="46.4" />
+                                    <text transform="matrix(1 0 0 1 574 245)" class="blanco">VU</text>
+                                </g>
+                                <g id="nt">
+                                    <circle class="no" cx="734.1" cy="228.7" r="46.4" />
+                                    <text transform="matrix(1 0 0 1 705 245)" class="blanco">NT</text>
+                                </g>
+                                <g id="lc">
+                                    <circle class="no" cx="865.6" cy="228.7" r="46.4" />
+                                    <text transform="matrix(1 0 0 1 840 245)" class="blanco">LC</text>
+                                </g>
+                                <g id="datos">
+                                    <text transform="matrix(1 0 0 1 29.8186 54.2935)" class="gris">Extinto</text>
+                                    <text transform="matrix(1 0 0 1 382.5784 54.2935)" class="gris">Amenazado</text>
+                                    <text transform="matrix(1 0 0 1 760.9694 54.2935)" class="gris">Preocupación</text>
+                                    <text transform="matrix(1 0 0 1 812.2867 95.3477)" class="gris">menor</text>
+                                    <line class="st6" x1="865.6" y1="119.4" x2="865.6" y2="162.5" />
+                                    <line class="st6" x1="82.1" y1="77.9" x2="82.1" y2="162.5" />
+                                    <path
+                                        class="st6"
+                                        d="M279.3,162.5v-55.2c0-6,4.8-10.8,10.8-10.8h161.1c4.4,0,7.9-0.3,10.4-0.9c2.6-0.5,5-1.9,7-3.8 c2.6-3.3,4.1-6,4.3-8.6c0.2,2.6,1.7,5.3,4.3,8.6c2.1,2.1,4.4,3.3,7,3.8c2.6,0.5,6.2,0.9,10.4,0.9h163.2c6,0,10.8,4.8,10.8,10.8v55.2"
+                                    />
+                                </g>
+                            </svg>
+                        </div>
+                    </div>
+
+
+                </header>
+
+        <main>
+            <section>
+                <div class="container">
+                    <div class="row">
+                        <div class="col-sm-11 col-md-10 col-lg-9 col-xl-8 col-xxl-7 mx-auto mt-5">
+                            <p>
+                                Los panda rojos poseen ciertas particularidades, siendo una de ellas su voluminoso pelaje muy similiar al de las ovejas,  especialmente en su cola. Además, cada ejemplar posee un patrón único en el rostro y la
+                                cola. Poseen glándulas odoríferas que les permiten marcar su rastro. Emiten siete diferentes vocalizaciones: aullido, balido, chillido, gorjeo, gruñido agudo, gruñido con resoplo y ladrido.
+                            </p>
+                            <object data="IMG/panda_central.svg" type="image/svg+xml" alt="Ilustracion mamá panda rojo y su cachorro" class="my-5"></object>
+                          <div class="px-3 py-2 rounded-pill shadow-sm mx-auto" style="width: 230px; background: #ddd;">
+                                <audio id="elAudio">
+                                    <source src="IMG/Audio_Panda.mp3" type="audio/mpeg" alt="vocalizaciones del panda rojo" />
+                                    <source src="IMG/Audio_Panda.ogg" type="audio/ogg" alt="vocalizaciones del panda rojo" />
+                                </audio>
+                                <div class="form-check form-switch text-center">
+                                    <input class="form-check-input" type="checkbox" id="elSwitch" />
+                                    <label class="form-check-label" for="elSwitch">Escúchalo aquí</label>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <section class="container">
+               <div class="row">
+                   <div class="col-sm-11 col-md-10 col-lg-9 col-xl-8 col-xxl-7 mx-auto">
+                       <h4 class="text-center pt-5 pb-2">Características</h4>
+                       <div class="row g-5">
+                           <div class="col-12 col-md-6">
+                               <img src="IMG/Lengua_olfativa_respaldo.jpg" alt="Ilustración que muestra la lengua" class="w-100 mx-auto" />
+                               <p class="px-3">
+                                   La lengua mide 7,6 cm de largo, la suelen utilizar para comer, acicalarse, limpiar su madriguera; pero también para oler rastros debido a que la mucosa que la cubre tiene cinco tipos de papilas gustativas: circunvaladas, cónicas, fungiformes, foliares y filiformes.
+                               </p>
+                           </div>
+                           <div class="col-12 col-md-6">
+                               <img src="IMG/Dedo_falso_respaldo.jpg" alt="Ilustración el dedo falso" class="w-100 mx-auto" />
+                               <p class="px-3">
+                                   Cuenta con un <em>dedo falso</em> que es la prolongación de un pequeño hueso de la muñeca, sesamoídeo.  Éste le facitita manipular el bambú.
+                               </p>
+                           </div>
+                       </div>
+                   </div>
+               </div>
+           </section>
+            <section class="container">
+                <div class="row">
+                    <div class="col-sm-11 col-md-10 col-lg-9 col-xl-8 col-xxl-7 mx-auto">
+                        <div class="row g-5">
+                      <h4 class="text-center pt-5 pb-2">Medidas y peso</h4>
+                        <div class="text-center">
+                            <p>Altura similar a la de los gatos domésticos.</p>
+                            <object data="IMG/Dimensiones.svg" alt="Comparación de alturas entre oso panda, panda rojo y un gato doméstico" type="image/svg+xml" class="w-75 mx-auto"></object>
+                            <object data="IMG/peso_medidas.svg" alt="Se muestra la dimensión del largo de la cola, el cuepo y el peso de un ejemplar adulto" type="image/svg+xml" class="w-50 mx-auto"></object>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <section class="container">
+                <div class="row">
+                    <div class="col-sm-11 col-md-10 col-lg-9 col-xl-8 col-xxl-7 mx-auto">
+                        <h4 class="text-center pt-5 pb-2">Una casta singular</h4>
+                        <p>
+                          Frecuentemente es relacionado con el oso panda, sin embargo, éste pertenece a la <em>familia</em> <i>Ursidae</i>,
+                          la misma que comparten todos los osos. En cambio, el panda rojo está clasificado en la <em>familia </em><i>Ailurus</i>;
+                          como <em>único en su especie</em><br>Del griego <i>Ailurus</i> = Gato<br>Del latín <i>fulgens</i> = Brillante.<br><em>Subespecies:</em><br>
+                          <i>- Ailurus fulgens styani</i> o panda rojo de China <br> <i>- Ailurus fulgens fulgens</i> o panda rojo de Himalaya.
+                        </p>
+                        <div id="image-compare" class="my-3">
+                            <img src="IMG/Subespecies_china.jpg" alt="Panda de China  pelaje rojizo" />
+                            <img src="IMG/Subespecies_himalaya.jpg" alt="Panda de Himalaya pelaje más blanco" />
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <section class="container pb-5">
+                <div class="row">
+                    <div class="col-sm-11 col-md-10 col-lg-9 col-xl-8 col-xxl-7 mx-auto text-center">
+                      <h4 class="my-5 text-center">Posiciones destacadas.</h4>
+                      <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous" />
+—                          <div class="col-12">
+                             <img src="IMG/Posiciones_descanso.png" alt="Ilustración que muestra descansando al panda" class="w-50 mx-auto" />
+                              <p>Pasa la mayor parte del día durmiendo.</p>
+                              <img src="IMG/Posiciones_abrigo.png" alt="Ilustración que muestra dormido al panda" class="w-50 mx-auto" />
+                               <p>Su cola le sirve para regular su temperatura.</p>
+                               <img src="IMG/Posiciones_defenza.png" alt="Ilustración que muestra posicion de defensa" class="w-50 mx-auto" />
+                                <p>Su cuerpo es muy flexible.</p>
+                                <img src="IMG/Posiciones_caminata.png" alt="Ilustración que muestra su caminata" class="w-50 mx-auto" />
+                                 <p>Tiene una caminata contorneada debido a que sus patas miran hacia el interior.</p>
+                            </div>
+                            <div class="col-12">
+                              <h4 class="my-5 text-center">Alimentación y comparación entre pandas.</h4>
+                               <img src="IMG/Alimentacion_panda_rojo.jpg" alt="Ilustración que muestra la lengua" class="w-75 mx-auto" />
+                                <p>Es un carnívoro vegetariano. Su dieta se basa en bambú (98%9) y además Frutas, tallos, raíces, semillas, hongos, huevos, insectos, aves, roedores y pequeños reptiles (2%).</p>
+                                <br><p>Su digestión tarda dos a cuatro horas.</p>
+                              </div>
+                            <div class="col-12">
+                                 <img src="IMG/Alimentacion_panda_gigante.jpg" alt="Ilustración que muestra la lengua" class="w-75 mx-auto" />
+                                <p>Su alimentación se basa solamente en bambú. Su digestión tarda 24 horas.</p>
+                              </div>
+                            <div class="col-sm-11 col-md-10 col-lg-9 col-xl-8 col-xxl-7 mx-auto text-center">
+                        <h4 class="my-5 text-center">Conservación</h4>
+                        <div class="text-center">
+                            <object data="IMG/mapa.svg" type="image/svg+xml" alt="Mapa que muestra la población de pandas rojos ubicada en China, India, Nepal y Bután" class="w-100 mx-auto"></object>
+                            <object data="IMG/mortalidad.svg" type="image/svg+xml" class="w-50 mx-auto"></object>
+                            <object data="IMG/amenaza_grafico.svg" type="image/svg+xml" class="w-50 mx-auto"></object>
+                        </div>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque quis lacus sit amet elit commodo condimentum eget vitae enim. Nunc eleifend mi et ornare scelerisque.</p>
+                        <h4 class="my-5 text-center">Asentamiento</h4>
+                        <div class="text-center">
+                          <object data="IMG/mapa_conservacion.svg" type="image/svg+xml" class="w-100 mx-auto"></object>
+
+                        </div>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque quis lacus sit amet elit commodo condimentum eget vitae enim. Nunc eleifend mi et ornare scelerisque.</p>
+                    </div>
+                </div>
+            </section>
+        </main>
+
+        <aside>
+            <div class="container small text-center">
+                <div class="row py-5">
+                    <div class="col-sm-11 col-md-10 col-lg-9 col-xl-8 col-xxl-7 mx-auto">
+                        <h5 class="fs-6 mb-3">Fuentes</h5>
+                        <p>
+                            <a href="http://visibleearth.nasa.gov/view.php?id=40173">NASA Visible Earth</a> &bull; <a href="http://orbitaldebris.jsc.nasa.gov/">NASA Orbital Debris Program Office</a> &bull;
+                            <a href="http://www.ucsusa.org/">UCS Union of Concerned Scientics</a> &bull; <a href="http://www.jpl.nasa.gov/">NASA Jet Propulsion Laboratory</a> &bull; <a href="#">SSN (U.S. Space Surveillance Network)</a>
+                        </p>
+                        <p><em>Agradecimientos a</em> Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum fringilla lorem nec tristique varius. Fusce egestas ullamcorper lorem et consequat.</p>
+                        <h5 class="fs-6 mt-5 mb-3">Versión impresa</h5>
+                        <a href="#" data-bs-toggle="modal" data-bs-target="#modalImpreso">
+                            <img src="IMG/impresa.jpg" class="w-50 shadow-sm mb-5" alt="infografía impresa pequeña" />
+                        </a>
+                        <div class="modal fade" id="modalImpreso" tabindex="-1" aria-hidden="true">
+                            <div class="modal-dialog modal-fullscreen">
+                                <img src="IMG/infografia_impresa.jpg" class="w-100" alt="infografía impresa grande" />
+                            </div>
+                        </div>
+                        <p class="small">
+                            <em><a href="https://www.diplomadodeinfografia.cl/" class="link-dark" target="_blank">Diplomado de Infografía</a> &bull; 2021</em><br />
+                            Escuela de Diseño de la Pontificia Universidad Católica de Chile<br />
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <div class="bg-light">
+                <div class="container py-5">
+                    <div class="row">
+                        <h4 class="col-12 mb-4 text-center">También te puede interesar</h4>
+                    </div>
+                    <div class="row g-4" id="colegas"></div>
+               <script>
+                  const colegas = document.getElementById("colegas");
+                  const datos = [
+                     { especie: "Gibón de manos blancas", imagen: "https://raw.githubusercontent.com/profesorfaco/infografia/main/thumbnails/gibon.jpg", descripcion: "el danzarín del bosque.", url: "https://gibon-de-manos-blancas.github.io/avance/" },
+                     { especie: "Grulla de cuello blanco", imagen: "https://raw.githubusercontent.com/profesorfaco/infografia/main/thumbnails/grulla.jpg", descripcion: "un viajera romántica.", url: "https://grulla-de-cuello-blanco.github.io/avance" },
+                     { especie: "Hipopótamo pigmeo", imagen: "https://raw.githubusercontent.com/profesorfaco/infografia/main/thumbnails/hipopotamo.jpg", descripcion: "un pequeño caballo de río.", url: "https://hipopotamo-pigmeo.github.io/avance" },
+                     { especie: "Panda rojo", imagen: "https://raw.githubusercontent.com/profesorfaco/infografia/main/thumbnails/panda.jpg", descripcion: "el animal más bonito del mundo.", url: "https://infografia-panda-rojo.github.io/avance" },
+                     { especie: "Lemur de cola anillada", imagen: "https://raw.githubusercontent.com/profesorfaco/infografia/main/thumbnails/lemur.jpg", descripcion: "el zorrillo de Madagascar.", url: "https://lemur-cola-anillada.github.io/avance" },
+                     { especie: "Orangután de borneo", imagen: "https://raw.githubusercontent.com/profesorfaco/infografia/main/thumbnails/orangutan.jpg", descripcion: "el hombre del bosque.", url: "https://orangutan-borneo-uc.github.io/avance" },
+                     { especie: "Oso malayo", imagen: "https://raw.githubusercontent.com/profesorfaco/infografia/main/thumbnails/oso.jpg", descripcion: "el oso más pequeño.", url: "https://oso-malayo.github.io/avance" },
+                     { especie: "Siamang", imagen: "https://raw.githubusercontent.com/profesorfaco/infografia/main/thumbnails/siamang.jpg", descripcion: "el acróbata de la selva.", url: "https://siamang-infografia.github.io/avance" },
+                     { especie: "Tapir amazónico", imagen: "https://raw.githubusercontent.com/profesorfaco/infografia/main/thumbnails/tapir.jpg", descripcion: "el jardinero de la selva.", url: "https://tapir-amazonico.github.io/avance" },
+                     { especie: "Tigre de bengala", imagen: "https://raw.githubusercontent.com/profesorfaco/infografia/main/thumbnails/tigre.jpg", descripcion: "el felino más grande del mundo.", url: "https://tigre-de-bengala.github.io/avance/" }
+                  ];
+                  datos.forEach((d) => {
+                     if(d.especie != "Panda rojo"){
+                        colegas.innerHTML +=
+                           '<div class="col-12 col-md-6 col-lg-4"><div class="row shadow-sm g-0 small align-items-center bg-white"><div class="col-3"><img loading="lazy" src="' +
+                           d.imagen + '" alt="' +
+                           d.especie +
+                           '" class="w-100"></div><div class="col-9 p-2"><em>' +
+                           d.especie +
+                           '</em>, <a href="' +
+                           d.url +
+                           '">' +
+                           d.descripcion +
+                           "</a></div></div></div>";
+                     }
+                  });
+               </script>
+                </div>
+            </div>
+        </aside>
+
+        <!--ESTE ES EL PIE DE PÁGINA-->
+        <footer class="bg-dark text-white-50">
+            <div class="container">
+                <div class="row">
+                    <div class="col py-3">
+                        <p class="text-center small">
+                            Esta obra está bajo una <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/" class="link-light">Licencia Creative Commons Atribución-NoComercial-CompartirIgual 4.0 Internacional</a>.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </footer>
+
+        <!--CON EL SIGUIENTE SCRIPT ACTIVA EL AUDIO-->
+        <script>
+            var canto = document.getElementById("elAudio");
+            var boton = document.getElementById("elSwitch");
+            boton.addEventListener("change", function () {
+                if (this.checked) {
+                    canto.play();
+                } else {
+                    canto.pause();
+                }
+            });
+        </script>
+        <!--BOOTSTRAP, ADEMÁS DE UN CSS, OFRECE SU PROPIA BIBLIOTECA DE JAVASCRIPT-->
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
+        <!--LO QUE SIGUE ES OTRA BIBLIOTECA DE JAVASCRIPT-->
+        <script>
+            var popoverTriggerList = [].slice.call(document.querySelectorAll('[data-bs-toggle="popover"]'));
+            var popoverList = popoverTriggerList.map(function (popoverTriggerEl) {
+                return new bootstrap.Popover(popoverTriggerEl, { html: true });
+            });
+        </script>
+        <script src="https://unpkg.com/image-compare-viewer/dist/image-compare-viewer.min.js"></script>
+        <!--LO QUE SIGUE ES LA CONFIGURACIÓN DE LA COMPARACIÓN DE IMÁGENES-->
+        <script>
+            const element = document.querySelector("#image-compare");
+            const options = {
+                controlColor: "#FFFFFF",
+                controlShadow: true,
+                addCircle: true,
+                addCircleBlur: true,
+                showLabels: true,
+                labelOptions: {
+                    before: "China",
+                    after: "Himalaya",
+                    onHover: false,
+                },
+            };
+            const viewer = new ImageCompare(element, options).mount();
+        </script>
+    </body>
+</html>

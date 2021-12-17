@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg enable-background="new 0 0 1366 410" version="1.1" viewBox="0 0 1366 410" xml:space="preserve" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+<style type="text/css">
+	.st0{font-family:'Roboto';}
+	.st1{font-size:25px;}
+	.st2{font-size:18px;}
+	.st3{font-size:20px;}
+	.st4{fill:#2B2A2A;}
+</style>
+		<image width="1366" height="410" overflow="visible" xlink:href="D:\diplomado\Nueva carpeta\Nueva carpeta\mapa_conservacion.jpg">
+	</image>
+	<text class="st0 st1" transform="translate(458.11 101)">Nepal</text>
+	<text class="st0 st1" transform="translate(653.56 147)">Bután</text>
+	<text transform="translate(532.16 135.23)"><tspan class="st0 st1" x="0" y="0">Himal</tspan><tspan class="st0 st1" x="65.5" y="0">ay</tspan><tspan class="st0 st1" x="90.5" y="0">a</tspan></text>
+	<text class="st0 st2" transform="translate(634.11 204.65)">Bangladesh</text>
+	<text class="st0 st3" transform="translate(781.01 272.2)">Mynmar</text>
+	<text class="st0 st3" transform="translate(771.05 296.2)">(Birmania)</text>
+	<text class="st0 st2" transform="translate(581.14 388.8)">Golfo de Bengala</text>
+	<text class="st4 st0 st1" transform="translate(421.06 248.92)">India</text>
+	<text class="st4 st0 st1" transform="translate(184.88 389.79)">Asia</text>
+	<text class="st0 st2" transform="translate(634.11 38.43)">Tíbet</text>
+	<text transform="translate(119.64 123.75)"><tspan class="st0 st2" x="0" y="0">P</tspan><tspan class="st0 st2" x="11.3" y="0">akistán</tspan></text>
+	<text transform="translate(27.205 38.43)"><tspan class="st0 st2" x="0" y="0">A</tspan><tspan class="st0 st2" x="11.7" y="0">f</tspan><tspan class="st0 st2" x="17.8" y="0">ganistán</tspan></text>
+	<text class="st4 st0 st1" transform="translate(711.72 173.99)">India</text>
+	<text transform="translate(893.49 384.01)"><tspan class="st0 st2" x="0" y="0">T</tspan><tspan class="st0 st2" x="9.8" y="0">ailandia</tspan></text>
+	<text class="st0 st1" transform="translate(948.79 129)">China</text>
+	<text class="st0 st2" transform="translate(1117.2 335.36)">Mar de China Meridional</text>
+</svg>
